@@ -1,0 +1,122 @@
+.tutorial-nav {
+  background: white;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  padding: 1rem;
+  position: sticky;
+  top: 2rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+.tutorial-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #04AA6D;
+}
+
+.tutorial-nav-header h3 {
+  margin: 0;
+  color: #04AA6D;
+  font-size: 1.1rem;
+}
+
+.toggle-nav {
+  background: transparent;
+  border: 1px solid #d4d4d4;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.toggle-nav:hover {
+  border-color: #04AA6D;
+  color: #04AA6D;
+}
+
+.tutorial-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: #f1f1f1;
+  color: #04AA6D;
+}
+
+.nav-item.active {
+  background: #e8f5e9;
+  color: #04AA6D;
+  font-weight: 600;
+  border-left: 3px solid #04AA6D;
+}
+
+.nav-number {
+  background: #f1f1f1;
+  color: #666;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.nav-item.active .nav-number {
+  background: #04AA6D;
+  color: white;
+}
+
+.nav-text {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.tutorial-nav.collapsed .tutorial-nav-list {
+  display: none;
+}
+
+/* Scrollbar styling */
+.tutorial-nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tutorial-nav::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.tutorial-nav::-webkit-scrollbar-thumb {
+  background: #04AA6D;
+  border-radius: 3px;
+}
+
+.tutorial-nav::-webkit-scrollbar-thumb:hover {
+  background: #059862;
+}
+

@@ -1,0 +1,101 @@
+.lesson-section {
+  background: white;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  padding: 2rem;
+  margin: 2rem 0;
+  transition: border-color 0.2s;
+}
+
+.lesson-section.completed {
+  border-color: #04AA6D;
+  background: #f9fff9;
+}
+
+.lesson-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.lesson-section.completed .lesson-header {
+  border-bottom-color: #04AA6D;
+}
+
+.lesson-number {
+  background: linear-gradient(135deg, #04AA6D 0%, #059862 100%);
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(4, 170, 109, 0.3);
+}
+
+.lesson-title {
+  flex: 1;
+  margin: 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.complete-checkbox {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #d4d4d4;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.complete-checkbox:hover {
+  border-color: #04AA6D;
+}
+
+.complete-checkbox.checked {
+  background: linear-gradient(135deg, #04AA6D 0%, #059862 100%);
+  border-color: #04AA6D;
+  color: white;
+  box-shadow: 0 2px 4px rgba(4, 170, 109, 0.3);
+}
+
+.lesson-content {
+  color: #333;
+  line-height: 1.8;
+}
+
+.lesson-content p {
+  margin-bottom: 1rem;
+}
+
+.lesson-content h3 {
+  color: #04AA6D;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.lesson-content ul,
+.lesson-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.lesson-content li {
+  margin-bottom: 0.5rem;
+}
+

@@ -1,0 +1,75 @@
+.code-block-container {
+  margin: 1.5rem 0;
+}
+
+.code-block-header {
+  background: #f1f1f1;
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+}
+
+.code-block-title {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.code-block {
+  position: relative;
+  background: #2d2d2d;
+  border-radius: 6px;
+  border: 1px solid #d4d4d4;
+  overflow: hidden;
+}
+
+.code-block-actions {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1;
+}
+
+.copy-button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.copy-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.code-content {
+  margin: 0;
+  padding: 1.5rem;
+  background: #2d2d2d;
+  color: #f8f8f2;
+  font-family: 'Courier New', Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.code-comment {
+  color: #75715e;
+}
+
+.code-prompt {
+  color: #a6e22e;
+}
+
+.code-content code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+

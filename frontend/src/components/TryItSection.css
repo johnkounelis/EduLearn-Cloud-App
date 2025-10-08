@@ -1,0 +1,140 @@
+.try-it-section {
+  background: #f9f9f9;
+  border: 2px solid #04AA6D;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.try-it-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #04AA6D;
+  padding-bottom: 0.5rem;
+}
+
+.try-it-header h3 {
+  margin: 0;
+  color: #04AA6D;
+  font-size: 1.2rem;
+}
+
+.reset-button {
+  background: transparent;
+  color: #04AA6D;
+  border: 1px solid #04AA6D;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.reset-button:hover {
+  background: #04AA6D;
+  color: white;
+}
+
+.try-it-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hint-button {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffc107;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  transition: background 0.2s;
+}
+
+.hint-button:hover {
+  background: #ffc107;
+  color: #000;
+}
+
+.hint-box {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 1rem;
+  border-radius: 4px;
+  color: #856404;
+}
+
+.command-prompt {
+  display: flex;
+  align-items: center;
+  background: #2d2d2d;
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Consolas, monospace;
+}
+
+.prompt-symbol {
+  color: #a6e22e;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.command-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #f8f8f2;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+}
+
+.command-input::placeholder {
+  color: #75715e;
+}
+
+.command-output {
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Consolas, monospace;
+  font-weight: bold;
+}
+
+.command-output.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.command-output.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.try-submit-button {
+  background: #04AA6D;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+.try-submit-button:hover:not(:disabled) {
+  background: #059862;
+}
+
+.try-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
