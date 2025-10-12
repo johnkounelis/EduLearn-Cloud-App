@@ -1,0 +1,337 @@
+.progress-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.progress-page .page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.progress-page .page-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.progress-page .page-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Auth prompt */
+.auth-prompt {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d4d4d4;
+}
+
+.auth-prompt h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.auth-prompt p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Stats */
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.progress-page .stat-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.progress-page .stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-completed {
+  background: linear-gradient(135deg, #04AA6D 0%, #047857 100%);
+}
+
+.stat-inprogress {
+  background: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);
+}
+
+.stat-assessments {
+  background: linear-gradient(135deg, #FF9800 0%, #E65100 100%);
+}
+
+.stat-score {
+  background: linear-gradient(135deg, #9C27B0 0%, #6A1B9A 100%);
+}
+
+.progress-page .stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Sections */
+.progress-sections {
+  display: grid;
+  gap: 2rem;
+}
+
+.progress-career-paths,
+.progress-assessments {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d4d4d4;
+}
+
+.progress-career-paths h2,
+.progress-assessments h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Progress cards */
+.progress-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.progress-card {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.progress-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.progress-card-info h3 {
+  margin-bottom: 0.25rem;
+}
+
+.progress-card-info h3 a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.progress-card-info h3 a:hover {
+  color: #04AA6D;
+}
+
+.progress-category {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-percentage {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #04AA6D;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2196F3 0%, #1565C0 100%);
+  transition: width 0.3s;
+  border-radius: 5px;
+}
+
+.progress-bar-fill.completed {
+  background: linear-gradient(90deg, #04AA6D 0%, #047857 100%);
+}
+
+.progress-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-completed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-active {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.progress-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Assessment history */
+.assessment-history {
+  display: grid;
+  gap: 1rem;
+}
+
+.assessment-history-card {
+  padding: 1.25rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.assessment-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.assessment-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.assessment-score {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.score-pass {
+  color: #04AA6D;
+}
+
+.score-fail {
+  color: #e65100;
+}
+
+.assessment-history-details {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.assessment-bar-container {
+  width: 100%;
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.assessment-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.assessment-bar-fill.pass {
+  background: linear-gradient(90deg, #04AA6D 0%, #047857 100%);
+}
+
+.assessment-bar-fill.fail {
+  background: linear-gradient(90deg, #FF9800 0%, #E65100 100%);
+}
+
+/* Empty state */
+.progress-page .empty-state {
+  text-align: center;
+  padding: 3rem;
+}
+
+.progress-page .empty-state p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+.progress-page .btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #04AA6D;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.progress-page .btn-primary:hover {
+  background: #059862;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: #04AA6D;
+  border: 2px solid #04AA6D;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #04AA6D;
+  color: white;
+}
+
+.progress-page .loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #666;
+}

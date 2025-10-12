@@ -1,0 +1,145 @@
+.assessment-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.assessment-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: #04AA6D;
+  color: white;
+  border-radius: 6px;
+}
+
+.assessment-header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.time-limit {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.assessment-form {
+  display: grid;
+  gap: 2rem;
+}
+
+.question-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d4d4d4;
+}
+
+.question-card h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.question-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.options-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.option-label:hover {
+  background: #e9ecef;
+}
+
+.option-label input[type="radio"] {
+  cursor: pointer;
+}
+
+.text-answer {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.submit-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-primary-large {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: #04AA6D;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-primary-large:hover:not(:disabled) {
+  background: #059862;
+}
+
+.btn-primary-large:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.result-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  margin: 2rem auto;
+  border: 1px solid #d4d4d4;
+}
+
+.result-card h2 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.result-score {
+  margin-bottom: 2rem;
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #04AA6D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+}
+
+.score-percentage {
+  font-size: 2.5rem;
+  font-weight: bold;
+}

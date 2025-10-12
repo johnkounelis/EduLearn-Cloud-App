@@ -1,0 +1,245 @@
+.skills-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.skills-page .page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skills-page .page-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.skills-page .page-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.skills-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.skills-search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #d4d4d4;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  max-width: 500px;
+}
+
+.skills-search-input:focus {
+  border-color: #04AA6D;
+}
+
+.skills-page .search-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.skills-page .clear-search {
+  position: absolute;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.skills-page .clear-search:hover {
+  background: #f1f1f1;
+}
+
+.skills-page .category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.skills-page .filter-btn {
+  padding: 0.5rem 1.25rem;
+  border: 2px solid #d4d4d4;
+  background: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  color: #555;
+}
+
+.skills-page .filter-btn:hover {
+  border-color: #04AA6D;
+  color: #04AA6D;
+}
+
+.skills-page .filter-btn.active {
+  background: #04AA6D;
+  color: white;
+  border-color: #04AA6D;
+}
+
+.skills-count {
+  text-align: center;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #d4d4d4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skill-category-badge {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.skill-level-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.level-beginner {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.level-intermediate {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.level-advanced {
+  background: #fce4ec;
+  color: #c62828;
+}
+
+.level-expert {
+  background: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.skill-name {
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.skill-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.skill-card-footer {
+  margin-top: auto;
+}
+
+.btn-explore {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #04AA6D;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-explore:hover {
+  background: #059862;
+}
+
+.skills-page .loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.skills-page .no-results {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #d4d4d4;
+}
+
+.skills-page .no-results p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.skills-page .btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #04AA6D;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.skills-page .btn-primary:hover {
+  background: #059862;
+}
