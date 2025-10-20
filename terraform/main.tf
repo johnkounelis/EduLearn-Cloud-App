@@ -1,0 +1,28 @@
+terraform {
+  required_version = ">= 1.3.0"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+  
+  backend "s3" {
+    # Configure S3 backend for state management (optional but recommended)
+    # bucket = "your-terraform-state-bucket"
+    # key    = "edulearn/terraform.tfstate"
+    # region = "eu-central-1"
+  }
+}
+
+provider "aws" {
+  region = var.aws_region
+  
+  default_tags {
+    tags = {
+      Project     = var.project_name
+      Environment = var.environment
+      ManagedBy   = "Terraform"
+    }
+  }
+}
