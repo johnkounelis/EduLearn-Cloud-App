@@ -1,3 +1,4 @@
+import os
 import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -18,13 +19,27 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# CORS configuration
+# CORS configuration - support both local dev and production URLs
+ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:8080",
+]
+
+# Add production origins from environment variable if set
+production_origins = os.getenv("CORS_ALLOWED_ORIGINS", "")
+if production_origins:
+    ALLOWED_ORIGINS.extend([origin.strip() for origin in production_origins.split(",")])
+
+logger.info(f"CORS allowed origins: {ALLOWED_ORIGINS}")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:8080"],  # React dev server ports
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type", "Accept", "Origin", "X-Requested-With"],
+    expose_headers=["X-Total-Count"],
+    max_age=600,
 )
 
 # Global exception handlers
