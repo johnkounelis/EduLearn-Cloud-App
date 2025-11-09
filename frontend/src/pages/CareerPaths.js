@@ -12,6 +12,7 @@ function CareerPaths() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedDifficulty, setSelectedDifficulty] = useState('all');
   const [searchTerm, setSearchTerm] = useState(searchParams.get('search') || '');
 
   const filterPaths = useCallback(() => {
@@ -22,10 +23,15 @@ function CareerPaths() {
       filtered = filtered.filter(path => path.category === selectedCategory);
     }
 
+    // Filter by difficulty
+    if (selectedDifficulty !== 'all') {
+      filtered = filtered.filter(path => path.difficulty?.toLowerCase() === selectedDifficulty.toLowerCase());
+    }
+
     // Filter by search term
     if (searchTerm.trim()) {
       const term = searchTerm.toLowerCase();
-      filtered = filtered.filter(path => 
+      filtered = filtered.filter(path =>
         path.title.toLowerCase().includes(term) ||
         path.description?.toLowerCase().includes(term) ||
         path.category.toLowerCase().includes(term)
@@ -33,7 +39,7 @@ function CareerPaths() {
     }
 
     setFilteredPaths(filtered);
-  }, [careerPaths, selectedCategory, searchTerm]);
+  }, [careerPaths, selectedCategory, selectedDifficulty, searchTerm]);
 
   useEffect(() => {
     fetchCareerPaths();
@@ -41,12 +47,12 @@ function CareerPaths() {
   }, [selectedCategory]);
 
   useEffect(() => {
-    if (careerPaths.length > 0 || searchTerm || selectedCategory !== 'all') {
+    if (careerPaths.length > 0 || searchTerm || selectedCategory !== 'all' || selectedDifficulty !== 'all') {
       filterPaths();
     } else {
       setFilteredPaths(careerPaths);
     }
-  }, [careerPaths, searchTerm, selectedCategory, filterPaths]);
+  }, [careerPaths, searchTerm, selectedCategory, selectedDifficulty, filterPaths]);
 
   const fetchCareerPaths = async () => {
     setLoading(true);
@@ -117,7 +123,25 @@ function CareerPaths() {
           </button>
         ))}
       </div>
+
+        <div className="difficulty-filters">
+          {['all', 'Beginner', 'Intermediate', 'Advanced'].map(level => (
+            <button
+              key={level}
+              className={selectedDifficulty === level ? 'filter-btn difficulty active' : 'filter-btn difficulty'}
+              onClick={() => setSelectedDifficulty(level)}
+            >
+              {level === 'all' ? 'All Levels' : level}
+            </button>
+          ))}
+        </div>
       </div>
+
+      {!loading && (
+        <div className="results-count">
+          Showing {filteredPaths.length} of {careerPaths.length} career paths
+        </div>
+      )}
 
         {loading ? (
         <div className="loading">Loading career paths...</div>
