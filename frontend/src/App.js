@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from './components/Navbar';
@@ -14,6 +14,37 @@ import Progress from './pages/Progress';
 import './App.css';
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+
+// Error Boundary component to catch rendering errors gracefully
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="error-boundary">
+          <h2>Something went wrong</h2>
+          <p>Please try refreshing the page.</p>
+          <button onClick={() => window.location.reload()} className="btn-primary">
+            Refresh Page
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 function App() {
   const [user, setUser] = useState(null);
@@ -49,6 +80,7 @@ function App() {
 
   return (
     <Router>
+      <ErrorBoundary>
       <div className="App">
         <Navbar user={user} onLogout={handleLogout} />
         <main className="App-main">
@@ -68,6 +100,7 @@ function App() {
           <p>&copy; 2024 EduLearn - IT Career Learning Platform. All rights reserved.</p>
         </footer>
       </div>
+      </ErrorBoundary>
     </Router>
   );
 }
