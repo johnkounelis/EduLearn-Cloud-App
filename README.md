@@ -694,6 +694,44 @@ This project is licensed under the MIT License.
 
 ---
 
+## API Rate Limiting & Security
+
+The API implements several security measures for production deployments:
+
+- **CORS**: Configurable allowed origins via `CORS_ALLOWED_ORIGINS` environment variable
+- **JWT Authentication**: 30-minute token expiration with HS256 signing
+- **Input Validation**: Pydantic v2 schemas validate all request bodies
+- **Error Handling**: Global exception handlers return consistent JSON error responses
+- **Password Policy**: Minimum 6 characters with bcrypt hashing (12 rounds)
+
+### Example Error Response
+```json
+{
+  "error": "Validation error",
+  "details": [
+    {
+      "loc": ["body", "email"],
+      "msg": "value is not a valid email address",
+      "type": "value_error"
+    }
+  ]
+}
+```
+
+---
+
+## Changelog
+
+| Date | Change |
+|------|--------|
+| Nov 2025 | Added difficulty filters and result counts to career paths page |
+| Nov 2025 | Improved form validation on login and registration pages |
+| Nov 2025 | Fixed progress persistence across sessions |
+| Oct 2025 | Configured CORS middleware for production deployment |
+| Oct 2025 | Initial release with full feature set |
+
+---
+
 ## Authors
 
 John Kounelis
