@@ -7,6 +7,8 @@
 [![Docker](https://img.shields.io/badge/docker-ready-2496ED.svg)](https://www.docker.com/)
 [![Terraform](https://img.shields.io/badge/terraform-aws-7B42BC.svg)](https://www.terraform.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://edu-learn-cloud-app-ivory.vercel.app)
+[![API Docs](https://img.shields.io/badge/API-docs-blue)](https://edulearn-cloud-app.onrender.com/docs)
 
 A comprehensive cloud-native learning platform designed for IT graduates and newcomers exploring career paths in technology. Built with a modern microservices architecture using FastAPI, React, Docker, and deployed on AWS with Terraform infrastructure-as-code.
 
@@ -34,14 +36,26 @@ A comprehensive cloud-native learning platform designed for IT graduates and new
 
 ## Live Demo
 
-| Service | URL | Description |
-|---------|-----|-------------|
-| Frontend | http://localhost:3000 | React SPA user interface |
-| Backend API | http://localhost:8000 | FastAPI REST API |
-| API Docs (Swagger) | http://localhost:8000/docs | Interactive API documentation |
-| Health Check | http://localhost:8000/health | Service health endpoint |
+The application is live and publicly accessible:
 
-**Demo Credentials:**
+- **Live Application**: https://edu-learn-cloud-app-ivory.vercel.app
+- **API Documentation (Swagger)**: https://edulearn-cloud-app.onrender.com/docs
+- **Health Check**: https://edulearn-cloud-app.onrender.com/health
+
+| Environment | Service | URL |
+|-------------|---------|-----|
+| Production | Frontend | https://edu-learn-cloud-app-ivory.vercel.app |
+| Production | Backend API | https://edulearn-cloud-app.onrender.com |
+| Production | API Docs (Swagger) | https://edulearn-cloud-app.onrender.com/docs |
+| Local | Frontend | http://localhost:3000 |
+| Local | Backend API | http://localhost:8000 |
+| Local | API Docs (Swagger) | http://localhost:8000/docs |
+
+> Register a free account at the live demo to explore career paths, take assessments, and track your progress.
+
+The frontend is deployed on Vercel and the backend on Render with a managed PostgreSQL database.
+
+**Local Demo Credentials:**
 ```
 Username: demo_user
 Password: Demo123!
