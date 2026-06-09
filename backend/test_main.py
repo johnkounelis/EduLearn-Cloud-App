@@ -302,12 +302,7 @@ class TestAssessments:
         # Submit correct answers
         answers = {}
         for q in detail["questions"]:
-            if q["question_text"].startswith("What is Infrastructure"):
-                answers[str(q["id"])] = "B) Managing infrastructure through code"
-            elif q["question_text"].startswith("Which AWS"):
-                answers[str(q["id"])] = "B) Lambda"
-            else:
-                answers[str(q["id"])] = "True"
+            answers[str(q["id"])] = q["correct_answer"]
 
         response = await client.post(
             f"/api/v1/assessments/{assessment_id}/submit",
